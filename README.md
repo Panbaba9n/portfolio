@@ -11,12 +11,16 @@ Detailed information about server part is located in /server folder.
 npm install &&
 npm run devstart`
 
-### Open a new terminal window:
-Ctrl + Shift + T
-
-### Then run client part in a new terminal:
-`cd ../client &&
+### Then run client part in a new terminal window:
+`cd ./client &&
 npm install &&
 npm run start`.
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Build
+
+### You should navigate to client folder.
+Run `ng build` to build the project. The build artifacts will be stored in the `server/public/` directory. Use the `-prod` flag for a production build.
+
+### To serve project you should type `npm run start` from the server folder.
