@@ -6,13 +6,16 @@ Detailed information about server part is located in /server folder.
 
 ## Development 
 
-###Run server(API) part:
-`cd /server &&
+### Run server(API) part:
+`cd ./server &&
 npm install &&
 npm run devstart`
 
-###Run client part:
-`cd /client &&
+### Open a new terminal window:
+Ctrl + Shift + T
+
+### Then run client part in a new terminal:
+`cd ../client &&
 npm install &&
 npm run start`.
 
