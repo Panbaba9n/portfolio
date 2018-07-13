@@ -1,0 +1,33 @@
+<div class="content-container">
+  <div class="title">
+    <h1>About</h1>
+  </div>
+
+  <div class="about-cont-wrap">
+    <div class="photo-wrap">
+      <img src="./assets/about.jpg" alt="My Photo">
+    </div>
+
+    <div class="about-info-wrap">
+      <div class="tabs-about">
+        <ul>
+          <li>
+            <a routerLink="about-me" routerLinkActive="active">
+              <span class="icon-home"></span>
+              <span>About me</span>
+            </a>
+          </li>
+          <li>
+            <a routerLink="profile" routerLinkActive="active">
+              <span class="icon-contact-icon"></span>
+              <span>Profile</span>
+            </a>
+          </li>
+        </ul>
+
+        <router-outlet></router-outlet>
+
+      </div>
+    </div>
+  </div>
+</div>

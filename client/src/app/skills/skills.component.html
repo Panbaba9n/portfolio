@@ -1,0 +1,22 @@
+<div class="content-container">
+  <div class="title">
+    <h1>Skills</h1>
+  </div>
+
+  <div class="skills-cont-wrap">
+    <div class="technologies-wrap">
+
+      <div *ngFor="let technology of technologies" class="technology">
+        <div class="technology-icon-wrap">
+          <div class="technology-icon" [innerHtml]="technology.icon"></div>
+        </div>
+        <h3>{{technology.title}}</h3>
+        <div class="technology-description" [innerHtml]="technology.description"></div>
+      </div>
+
+    </div>
+  </div>
+  <a href="" target="_blank"></a>
+
+
+</div>

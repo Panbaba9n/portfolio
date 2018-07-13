@@ -1,0 +1,167 @@
+@import "~variables.scss";
+
+/* Navigation panel */
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  width: 220px;
+  max-width: 100%;
+  min-height: 100vh;
+  padding: 0 10px;
+  transition: all .34s ease;
+  background-color: $theme;
+  overflow: auto;
+  z-index: 10;
+  &.small {
+    width: 100px;
+  }
+  @media (max-width: $medium) {
+    position: fixed;
+    overflow: auto;
+    &.hidden {
+      display: none !important;
+    }
+  }
+}
+
+/* Collapsing button */
+.collapse-menu {
+  margin-top: 15px;
+  box-shadow: $shadow;
+  border-radius: 50%;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+  &:hover {
+    background-color: $main;
+  }
+  &:active {
+    background-color: darken($main, 2%);
+    transform: translateY(2px);
+    box-shadow: $shadow-active;
+  }
+  &.collapsed {
+    position: absolute;
+    right: 15px;
+    &:before {
+      content: '<';
+    }
+  }
+  &:before {
+    content: '>';
+    display: block;
+    width: 25px;
+    height: 25px;
+    border: 1px solid $txt;
+    border-radius: 50%;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bolder;
+  }
+}
+
+/* Burger button for opening and closing "nav" panel */
+.navbar-toggler {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  width: 50px;
+  height: 43px;
+  background-color: $theme;
+  border: 1px solid $border;
+  border-radius: .25rem;
+  box-shadow: $shadow;
+  cursor: pointer;
+  &:active {
+    transform: translateY(2px);
+    box-shadow: $shadow-active;
+  }
+  @media (min-width: $medium-plus) {
+    display: none;
+  }
+  span {
+    position: absolute;
+    display: block;
+    height: 2px;
+    width: 36px;
+    background-color: $main;
+    transition: all 0.34s cubic-bezier(0.35, 0.3, 0.3, 2.4);
+    &:first-child {
+      top: 12px;
+    }
+    &:nth-child(2) {
+      top: 20px;
+      transition: all 0.5s cubic-bezier(0.35, 0.3, 0.3, 1.9);
+    }
+    &:last-child {
+      top: 28px;
+    }
+  }
+  &.clicked {
+    span {
+      top: 20px;
+      &:first-child {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+        transform: rotate(-225deg);
+      }
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  box-shadow: $shadow;
+  max-height: calc(100vh - 45px);
+  overflow: auto;
+  @media (min-width: $medium-plus) {
+    margin: auto 0;
+  }
+  .logo {
+    margin-top: auto;
+    max-width: 80px;
+    margin-bottom: 20px;
+    @media (min-width: $medium-plus) {
+      margin-bottom: 40px;
+    }
+  }
+  a {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+    transition: all .2s ease-in-out;
+    span:first-child {
+      margin-bottom: 5px;
+    }
+  }
+
+}
+
+/* Social links block */
+.social {
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  a {
+    text-decoration: none;
+    padding: 5px;
+    transition: all .2s ease-in-out;
+    &:hover {
+      transform: scale(1.5);
+    }
+  }
+}

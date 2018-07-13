@@ -1,0 +1,16 @@
+@import "~variables.scss";
+
+.content-container {
+  flex: 1 1 auto;
+}
+
+.page-wrapers {
+  width: 100%;
+  transition: all .7s ease;
+  @media (min-width: $medium) {
+    margin-left: 100px;
+    &.collapse {
+      margin-left: 220px;
+    }
+  }
+}

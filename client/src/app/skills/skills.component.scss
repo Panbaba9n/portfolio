@@ -1,0 +1,46 @@
+@import "~variables.scss";
+
+.skills-cont-wrap {
+  //
+}
+
+.technologies-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.technology {
+  width: 100%;
+  @media (max-width: $small-medium) {
+    margin: auto;
+  }
+  @media (min-width: $small-medium) {
+    max-width: 320px;
+  }
+  .technology-icon-wrap {
+    display: flex;
+    .technology-icon {
+      font-size: 3rem;
+      color: $main;
+      transition: all .3s ease-in-out;
+    }
+  }
+  h3 {
+    margin: 0 0 1rem;
+    font-size: 2rem;
+    font-weight: normal;
+    transition: all .2s ease-in-out;
+  }
+  &:hover {
+    .technology-icon-wrap {
+      .technology-icon {
+        transform: scale(1.5);
+      }
+    }
+    h3 {
+      color: $main;
+      font-size: 2rem;
+    }
+  }
+}

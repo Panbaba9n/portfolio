@@ -19,9 +19,16 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "shared/fonts/icomoon/icomoon.scss",
+        "shared/fonts/poppins/Poppins-Regular/Poppins-Regular.scss",
+        "shared/fonts/poppins/Poppins-Light/Poppins-Light.scss",
+        "shared/fonts/poppins/Poppins-Bold/Poppins-Bold.scss",
+        "shared/fonts/kaushanScript/KaushanScript-Regular/KaushanScript-Regular.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
