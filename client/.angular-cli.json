@@ -27,7 +27,6 @@
         "shared/fonts/kaushanScript/KaushanScript-Regular/KaushanScript-Regular.scss"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
